@@ -811,7 +811,7 @@ jQuery(window).load(function(a,b,c){
   //END================ LIGHTBOX ===================================================
 
 
-$(function () {
+/* $(function () {
 	$('#date_check_in').datetimepicker({
 			icons: {
 				next: "form_next_icon",
@@ -826,7 +826,7 @@ $(function () {
 			},
 			format: 'D MMMM'
 		});
-	});
+	}); */
 });
 
 //END============================= JQUERY TO PERFORM ON WINDOW LOAD =======================================
