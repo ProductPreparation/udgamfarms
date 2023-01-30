@@ -15,7 +15,7 @@ jQuery(function(){
        minDate: minDate
      });
    },
-   timepicker:false
+   timepicker:true
   });
 
   jQuery('#date_check_out').datetimepicker({
@@ -32,6 +32,6 @@ jQuery(function(){
        maxDate: date
      });
    },
-   timepicker:false
+   timepicker:true
   });
 });
