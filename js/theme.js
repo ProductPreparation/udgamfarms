@@ -509,15 +509,12 @@ jQuery(function($){
           loop       : true,
           autoplay   : true,
           autoplaySpeed: 1000,
-          autoplayTimeout: 3000,
-          dots: false,
-          nav: false,
-        navText: [
-          "<i class='previous_icon'></i>",
-          "<i class='next_icon'></i>"
-          ],
+          autoplayTimeout: 2000,
+          dots: true,
+          nav: true,
+          /* navText: [ "<i class='previous_icon'></i>", "<i class='next_icon'></i>"], */ 
+          navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
         });
-
     }
 
   })(jQuery);
@@ -530,7 +527,7 @@ jQuery(function($){
         dots:false,
         loop:true,
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 2000,
         autoplaySpeed: 1000,
         navText: [
           "<i class='previous_icon'></i>",
@@ -552,7 +549,7 @@ jQuery(function($){
           autoplayTimeout: 3000,
           dots: false,
           nav: false,
-        navText: [
+          navText: [
           "<i class='previous_icon'></i>",
           "<i class='next_icon'></i>"
           ],

@@ -9202,6 +9202,25 @@ a.symbol:before {
   font-size: 130%;
 }
 
+/* Website brand color */
+.brand-color{
+  color:#ffb215; 
+}
+
+/* Home Page - Testimonial Owl-Carousel */
+.owl-prev, .owl-next {
+  width: 15px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block !important;
+  border:0px solid black;
+}
+.owl-prev { left: -100px; }
+.owl-next { right: -100px; }
+.owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
+
 /* Whatsapp sticky icon related */
 #whatsapp-chat-btn {
   position: fixed;
@@ -9211,6 +9230,7 @@ a.symbol:before {
   width: 240px;
   height: 60px;
   font-size: 20px;
+  display: none;
 }
 
 #whatsapp-chat-btn a {
@@ -9235,7 +9255,6 @@ a.symbol:before {
   width: 49%;
   margin-right: 1%;
 }
-
 #contact-phone{
   width: 49%;
   margin-left: 1%;
@@ -9275,12 +9294,8 @@ a.symbol:before {
   background-color: #444;
   color: #fff;
 }
-
 @media (max-width: 768px) {
   .contact-both-pad{
     margin-left: 16.667%;
   }
-}
-.brand-color{
-  color:#ffb215; 
 }
