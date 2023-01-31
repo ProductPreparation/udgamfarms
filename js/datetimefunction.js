@@ -1,6 +1,7 @@
 jQuery(function(){
   jQuery('#date_check_in').datetimepicker({
-   format:'Y/m/d',
+   formatDate:'Y/m/d',
+   formatTime:'H:i',
    minDate:0,
    onShow:function( ct ){
      this.setOptions({
@@ -19,7 +20,8 @@ jQuery(function(){
   });
 
   jQuery('#date_check_out').datetimepicker({
-   format:'Y/m/d',
+   formatDate:'Y/m/d',
+   formatTime:'H:i',
    minDate:0,
    onShow:function( ct ){
      this.setOptions({
