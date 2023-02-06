@@ -2555,7 +2555,7 @@ THE SECONDARY NAV WIDGETIZED AREA
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 40vh;
+  min-height: 55vh;
   width: 100%;
 }
 /*** Head Panel's Heading group ***/
@@ -8312,9 +8312,6 @@ ul.owl-carousel {
   .head_panel .slider_wrapper .caption.caption_right {
     right: 5%;
   }
-  .full_width_photo {
-    min-height: 40vh;
-  }
   /*** MAP ***/
   .map {
     height: 380px !important;
@@ -8401,9 +8398,6 @@ ul.owl-carousel {
     font-size: 12px;
   }
   /*** HEAD PANEL ***/
-  .full_width_photo {
-    min-height: 40vh;
-  }
   .caption .inner .t1 {
     font-size: 50px;
   }
