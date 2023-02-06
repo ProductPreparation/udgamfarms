@@ -413,7 +413,7 @@ i.fa.white_section {
 .margin_left_custom_1 {
   margin-left: 50px;
 }
-.rooms_margin_custom_1 {
+.amenities_margin_custom {
   margin-top: 35px !important;
   margin-bottom: 35px !important;
 }
@@ -1525,7 +1525,7 @@ body.sticky_header:not(.transparent_header) {
   position: relative;
 }
 a {
-  color: #6fb586;
+  color: #6fb586; /* Change #init : added interaction */
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1534,8 +1534,8 @@ a {
 a:hover,
 a:active,
 a:focus {
-  text-decoration: none;
   color: #6fb586;
+  text-decoration: none;
 }
 a:focus {
   outline: none;
@@ -2555,11 +2555,8 @@ THE SECONDARY NAV WIDGETIZED AREA
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 380px;
+  min-height: 40vh;
   width: 100%;
-}
-.full_width_photo {
-  min-height: 320px;
 }
 /*** Head Panel's Heading group ***/
 .head_panel .hgroup {
@@ -4833,24 +4830,19 @@ ul.pagination li a:first-child {
 #head_panel_slider .owl-nav {
   display: none;
 }
-.room_bg_light {
+.facility_bg_light {
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
   margin: 0px  0px 0px 0px;
 }
-.room_bg_light.full_width_room {
-  padding: 25px 24px 27px 24px;
+.facility_bg_light.full_width_room {
+  padding: 24px 24px 24px 24px;
 }
-.room_bg_light.compact_width_room {
+.facility_bg_light.compact_width_room {
   padding: 0px 24px 24px 24px;
 }
-.room_bg_light.no_margin_top {
+.facility_bg_light.no_margin_top {
   margin-top: 0 0 0 0;
-}
-.room_bg_light img {
-  margin-top: 9px;
-  position: relative;
-  z-index: 999;
 }
 .room_bg_dark {
   background-color: #171720;
@@ -4865,11 +4857,6 @@ ul.pagination li a:first-child {
 }
 .room_bg_dark.no_margin_top {
   margin-top: 0 0 0 0;
-}
-.room_bg_dark img {
-  margin-top: 9px;
-  position: relative;
-  z-index: 999;
 }
 .room_bg_dark h2 a {
   color: #fff !important;
@@ -5903,7 +5890,7 @@ Text block
 }
 .text_block p {
   font-weight: 200;
-  font-size: 20px; /* Change #init : font-size: 16px */
+  font-size: 18px; /* Change #init : font-size: 16px */
   margin-bottom: 24px;
   color: #000; /* Change #init : added */
 }
@@ -8326,7 +8313,7 @@ ul.owl-carousel {
     right: 5%;
   }
   .full_width_photo {
-    min-height: 280px;
+    min-height: 40vh;
   }
   /*** MAP ***/
   .map {
@@ -8415,7 +8402,7 @@ ul.owl-carousel {
   }
   /*** HEAD PANEL ***/
   .full_width_photo {
-    min-height: 80px;
+    min-height: 40vh;
   }
   .caption .inner .t1 {
     font-size: 50px;
@@ -9298,4 +9285,15 @@ a.symbol:before {
   .contact-both-pad{
     margin-left: 16.667%;
   }
+}
+
+/* Sports Page */
+.activities-icon{
+  height: 1.2em;
+  text-align: center;
+  margin: 0 2px 2px 2px!important; /* To give oval shape circualar look */
+}
+
+.facility_bg_light .text_block h2 a:hover{
+  color: #ffb215;
 }
