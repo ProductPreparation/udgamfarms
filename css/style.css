@@ -4,8 +4,6 @@
     0. =BOOTSTRAP FRAMEWORK REFERENCE IMPORTS
     1. =THEME MIXINS GENERAL HELPER STYLES & CLASSES 
     2. =BUTTONS
-    3. =BODY & TYPOGRAPHY
-    4. =THE HEADER, LOGO & PRIMARY MENU
     5. =THE HEAD PANEL AREA
     6. =THE MAIN AREA & THE ROOT SECTION ELEMENT
     7. =DESIGN ELEMENTS
@@ -1502,213 +1500,7 @@ input[type="button"].btn-block {
 .btn.with-icon.btn-success i {
   background-color: #1b7943;
 }
-/* 
-3. =BODY & TYPOGRAPHY
-=============================================================== 
-*/
-body {
-  -webkit-font-smoothing: antialiased;
-  background-color: #f4f4f4;
-  color: #111118;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-body.sticky_header:not(.transparent_header) {
-  margin-top: 98px;
-}
-.overflow_wrapper {
-  overflow: hidden;
-  position: relative;
-}
-a {
-  color: #6fb586; /* Change #init : added interaction */
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-}
-a:hover,
-a:active,
-a:focus {
-  color: #6fb586;
-  text-decoration: none;
-}
-a:focus {
-  outline: none;
-}
-ul,
-ol,
-dl {
-  padding-left: 1em;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  line-height: 1.1;
-  text-transform: uppercase;
-  margin-top: 24px;
-  margin-bottom: 12px;
-}
-h1,
-.h1 {
-  font-size: 41px;
-}
-h2,
-.h2 {
-  font-size: 30px;
-}
-h3,
-.h3 {
-  font-size: 25px;
-}
-h4,
-.h4 {
-  font-size: 19px;
-}
-h5,
-.h5 {
-  font-size: 16px;
-}
-h6,
-.h6 {
-  font-size: 14px;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  color: inherit;
-}
-hr {
-  margin-bottom: 0 !important;
-}
-/* 
-4. =THE HEADER, LOGO & PRIMARY MENU
-=============================================================== 
-*/
-/*
---------------------------------------------------------------  
- 
-THE HEADER ELEMENT
 
--------------------------------------------------------------- 
-*/
-.header {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  background-color: #171720 !important;
-  width: 100%;
-  height: auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  z-index: 9999;
-}
-.header .container,
-.header .container-fluid {
-  position: relative;
-  min-height: 64px;
-}
-.header a:link,
-.header a:visited {
-  color: #ffffff;
-}
-.header a:hover,
-.header a:active {
-  color: #ffffff;
-}
-.header.full_width .mainbar .container,
-.header.full_width .top_bar .container {
-  width: 100%;
-}
-/* =Header Effects
-To use, assign the apropriate class (e.g. "sticky_header_bottom") to the .header div.
-By default (no class) the header is relative on top.
------------------------------------------------------------- */
-.header.transparent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #171720 !important;
-  background-color: rgba(23, 23, 32, 0.4) !important;
-}
-.header.sticky_header {
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.header.sticky_header.transparent {
-  position: fixed;
-}
-.header.appearing_sticky_header {
-  position: fixed;
-  -o-transform: translate(0, -98px);
-  -webkit-transform: translate(0, -98px);
-  -ms-transform: translate(0, -98px);
-  transform: translate(0, -98px);
-}
-.header.appearing_sticky_header.stuck {
-  -o-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.header.bottom_sticky_header {
-  position: fixed;
-  top: inherit;
-  bottom: 0px;
-}
-.header.bottom_to_top_sticky_header {
-  position: absolute !important;
-  bottom: 0px;
-  top: inherit;
-}
-.header.bottom_to_top_sticky_header.stuck {
-  position: fixed !important;
-  top: 0px;
-  bottom: inherit;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-}
 /*
 --------------------------------------------------------------  
  
@@ -1849,7 +1641,7 @@ NAVIGATION AND TOOLS ON THE HEADER
 }
 .header nav.primary_nav ul li a:hover,
 .header nav.primary_nav ul li a:active {
-  color: #ffffff;
+  color: #6fb586; /* Change #init : Changed active tab color on green */
   background: none;
 }
 .header nav.primary_nav ul li.logo_in_nav a {
@@ -5874,7 +5666,7 @@ Text block
   font-weight: 700;
   margin-bottom: 24px;
   margin-top: 0 !important;
-  color: #ffb215; /* Change #init : added */
+  color: #6fb586; /* Change #init : added */
 }
 .text_block h3 small a {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7636,7 +7428,7 @@ footer .copyright_content {
   font-size: 14px; /* Change #init : font-size: 12px */
   opacity: .5;
   padding-top: 20px;
-  color: #ffb215;/* Change #init : color: #fdfdfd; */
+  color: #6fb586;/* Change #init : color: #fdfdfd; */
 }
 .copyright p {
   vertical-align: bottom;
@@ -8513,35 +8305,129 @@ ul.owl-carousel {
 /*------------------------------------------------------------- Common To All Pages  ----------------------------------------------------------------*/
 /* Website brand color */
 .brand-color{
-  color:#ffb215; 
+  color: #6fb586; 
 }
+
+/*------------------------------------------------------------- Common : Body Element ----------------------------------------------------------------*/
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #f4f4f4;
+  color: #111118;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+body.sticky_header:not(.transparent_header) { margin-top: 98px; }
+.overflow_wrapper                           { overflow: hidden; position: relative; }
+a {
+  color: #6fb586; /* Change #init : added interaction */
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-overflow-scrolling: touch;
+}
+a:hover, a:active, a:focus                   { color: #6fb586; text-decoration: none; }
+a:focus { outline: none; }
+ul, ol, dl                                   { padding-left: 1em; }
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Playfair Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+h1, .h1  { font-size: 41px; }
+h2, .h2  { font-size: 30px; }
+h3, .h3  { font-size: 25px; }
+h4, .h4  { font-size: 19px; }
+h5, .h5  { font-size: 16px; }
+h6, .h6  { font-size: 14px; }
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, 
+.h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small, 
+h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, 
+.h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small { 
+  color: inherit; 
+}
+hr { margin-bottom: 0 !important; }
+
+/*------------------------------------------------------------- Common : Header Element ----------------------------------------------------------------*/
+.header {
+  /* font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  background-color: #171720 !important;
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-overflow-scrolling: touch;
+  position: relative; */
+  z-index: 9999;
+}
+.header .container, .header .container-fluid   { position: relative; min-height: 64px; }
+.header a:link, .header a:visited              { color: #ffffff; }
+.header a:hover, .header a:active              { color: #6fb586; }
+.header.full_width .mainbar .container,
+.header.full_width .top_bar .container         { width: 100%; }
+.header.transparent                            { position: absolute; top: 0; left: 0; width: 100%; background-color: #171720 !important; background-color: rgba(23, 23, 32, 0.4) !important; }
+.header.sticky_header                          { left: 0; position: fixed; top: 0; width: 100%; }
+.header.sticky_header.transparent              { position: fixed; }
+.header.appearing_sticky_header {
+  position: fixed;
+  -o-transform: translate(0, -98px);
+  -webkit-transform: translate(0, -98px);
+  -ms-transform: translate(0, -98px);
+  transform: translate(0, -98px);
+}
+.header.appearing_sticky_header.stuck {
+  -o-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.header.bottom_sticky_header                   { position: fixed; top: inherit; bottom: 0px; }
+.header.bottom_to_top_sticky_header            { position: absolute !important; bottom: 0px; top: inherit; }
+.header.bottom_to_top_sticky_header.stuck {
+  position: fixed !important;
+  top: 0px;
+  bottom: inherit;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Whatsapp sticky icon related */
-#whatsapp-chat-btn { position: fixed; bottom: 60px; right: 20px; z-index: 9999; width: 240px; height: 60px; font-size: 20px; display: none; }
-#whatsapp-chat-btn a { display: block; background-color: #25d366; color: #fff; padding: 10px; text-align: center; text-decoration: none; border-radius: 15px; }
-#whatsapp-chat-btn a i { margin-right: 5px; font-size: 24px; padding: 8px; transform: scale(1.5); }
+#whatsapp-chat-btn       { position: fixed; bottom: 60px; right: 20px; z-index: 9999; width: 240px; height: 60px; font-size: 20px; display: none; }
+#whatsapp-chat-btn a     { display: block; background-color: #25d366; color: #fff; padding: 10px; text-align: center; text-decoration: none; border-radius: 15px; }
+#whatsapp-chat-btn a i   { margin-right: 5px; font-size: 24px; padding: 8px; transform: scale(1.5); }
 
 /*--------------------------------------------------- Home Page : Testimonial Owl-Carousel  ---------------------------------------------------------*/
-.owl-prev, .owl-next { width: 15px; height: 100px; position: absolute; top: 50%; transform: translateY(-50%); display: block !important; border:0px solid black; }
-.owl-prev { left: -100px; }
-.owl-next { right: -100px; }
+.owl-prev, .owl-next     { width: 15px; height: 100px; position: absolute; top: 50%; transform: translateY(-50%); display: block !important; border:0px solid black; }
+.owl-prev                { left: -100px; }
+.owl-next                { right: -100px; }
 .owl-prev i, .owl-next i {transform : scale(2,5); color: #ccc;}
 
 /*----------------------------------------------------------- Contact Page : Contact Form ----------------------------------------------------------------*/
-#contact-name{ width: 49%; margin-right: 1%; }
-#contact-phone{ width: 49%; margin-left: 1%; }
+#contact-name            { width: 49%; margin-right: 1%; }
+#contact-phone           { width: 49%; margin-left: 1%; }
 
 /*----------------------------------------------------------- Contact Page : Contact Details ----------------------------------------------------------------*/
-.contact-box { position: relative; width: 100%; display: block; margin: 1.5rem 0 1.5rem 0; padding: 1rem 1rem 0 1rem; }
-.contact-box img{ width: 36px; height: auto; display: block; margin: 0 auto; }
-.contact-box h1, .contact-box h2, .contact-box h3, .contact-box h4, .contact-box h5, .contact-box h6{ font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-.contact-box h4{ font-weight: 600; font-size: 2.4rem; }
-.contact-box a{ color: #fff !important; margin-bottom: 1.5rem; }
-.contact-box p{ word-wrap: break-word; padding: 0 4% 0 4%; min-height: 70px; }
-.contact-box p span{ color: #ffb215; }
+.contact-box             { position: relative; width: 100%; display: block; margin: 1.5rem 0 1.5rem 0; padding: 1rem 1rem 0 1rem; }
+.contact-box img         { width: 36px; height: auto; display: block; margin: 0 auto; }
+/* .contact-box h1, .contact-box h2, .contact-box h3, .contact-box h4, .contact-box h5, .contact-box h6{ 
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+} */
+.contact-box h4          { font-weight: 600; font-size: 2.4rem; }
+.contact-box a           { color: #fff !important; margin-bottom: 1.5rem; }
+.contact-box p           { word-wrap: break-word; padding: 0 4% 0 4%; min-height: 70px; }
+.contact-box p span      { color: #ffb215; }
 .contact-box p span:hover{ font-weight: 500; }
-.contact-box i:hover{ color: #ffb215; }
-.btn-dark-bg{ background-color: #444; color: #fff; }
-@media (max-width: 768px) { .contact-both-pad{ margin-left: 16.667%; } }
+.contact-box i:hover     { color: #ffb215; }
+.btn-dark-bg             { background-color: #444; color: #fff; }
+@media (max-width: 768px){ .contact-both-pad{ margin-left: 16.667%; } }
 
 /*-----------------------------------------------------   Common To All Activities Page ----------------------------------------------------------------*/
 .activities-icon{ height: 1.2em; text-align: center; margin: 0 2px 2px 2px!important; } /* To give oval shape circualar look */
