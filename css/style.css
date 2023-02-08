@@ -2050,7 +2050,7 @@ THE SECONDARY NAV WIDGETIZED AREA
 .secondary_nav_widgetized_area nav ul li a:active,
 .secondary_nav_widgetized_area nav ul li a.active,
 .secondary_nav_widgetized_area nav ul li a:focus {
-  color: #ffffff;
+  color: #6fb586;
   background-color: #171720;
 }
 .secondary_nav_widgetized_area nav ul li ul {
@@ -8401,6 +8401,7 @@ hr { margin-bottom: 0 !important; }
 /*----------------------------------------------------------- Contact Page : Contact Form ----------------------------------------------------------------*/
 #contact-name            { width: 49%; margin-right: 1%; }
 #contact-phone           { width: 49%; margin-left: 1%; }
+#contact-message         { resize: none;}
 
 /*----------------------------------------------------------- Contact Page : Contact Details ----------------------------------------------------------------*/
 .contact-box             { position: relative; width: 100%; display: block; margin: 1.5rem 0 1.5rem 0; padding: 1rem 1rem 0 1rem; }
