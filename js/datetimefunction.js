@@ -1,4 +1,4 @@
-jQuery(function(){
+/* jQuery(function(){
   jQuery('#date_check_in').datetimepicker({
    formatDate:'Y/m/d',
    formatTime:'H:i',
@@ -16,7 +16,7 @@ jQuery(function(){
        minDate: minDate
      });
    },
-   timepicker:true
+   timepicker:false
   });
 
   jQuery('#date_check_out').datetimepicker({
@@ -34,6 +34,28 @@ jQuery(function(){
        maxDate: date
      });
    },
-   timepicker:true
+   timepicker:false
   });
-});
+}); */
+
+jQuery(function(){
+  jQuery('#date_check_in').datetimepicker({
+   format:'Y/m/d',
+   minDate:0,
+   onShow:function( ct ){
+    this.setOptions({
+     maxDate:jQuery('#date_check_out').val()?jQuery('#date_check_out').val():false
+    })
+   },
+   timepicker:false
+  });
+  jQuery('#date_check_out').datetimepicker({
+   format:'Y/m/d',
+   onShow:function( ct ){
+    this.setOptions({
+     minDate:jQuery('#date_check_in').val()?jQuery('#date_check_in').val():false
+    })
+   },
+   timepicker:false
+  });
+ });

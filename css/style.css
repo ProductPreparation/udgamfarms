@@ -7794,105 +7794,21 @@ ul.owl-carousel {
 13. =RESPONSIVE STATES
 =============================================================== 
 */
-/* =Responsive: Very Large Desktops (Higher Part of LG)
--------------------------------------------------------------- */
-@media only screen and (min-width: 1401px) {
-  .vcenter div[class*="col-"] {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-right: -4px;
-  }
-  .vbottom div[class*="col-"] {
-    display: inline-block;
-    vertical-align: bottom;
-    float: none;
-    margin-right: -4px;
-  }
-}
-/* =Responsive: Large Desktops (Lower 200px Part of LG)
--------------------------------------------------------------- */
-@media (min-width: 1200px) and (max-width: 1400px) {
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 40% !important;
-  }
-  .vcenter div[class*="col-"] {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-right: -4px;
-  }
-  .vbottom div[class*="col-"] {
-    display: inline-block;
-    vertical-align: bottom;
-    float: none;
-    margin-right: -4px;
-  }
-}
-/* =Responsive: Medium devices (MD) Desktops
--------------------------------------------------------------- */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .menu_container ul.main_menu > li > a {
-    padding: 10px 10px;
-  }
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 50% !important;
-  }
-  .vcenter div[class*="col-"] {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
-    margin-right: -4px;
-  }
-  .vbottom div[class*="col-"] {
-    display: inline-block;
-    vertical-align: bottom;
-    float: none;
-    margin-right: -4px;
-  }
-}
+
 /* =Responsive: Small devices (SM) Tablets (Mobile Menu) 
 -------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
-  h1,
-  .h1 {
-    font-size: 37px;
-  }
-  h2,
-  .h2 {
-    font-size: 27px;
-  }
-  h3,
-  .h3 {
-    font-size: 23px;
-  }
-  h4,
-  .h4 {
-    font-size: 18px;
-  }
-  h5,
-  .h5 {
-    font-size: 15px;
-  }
-  h6,
-  .h6 {
-    font-size: 13px;
-  }
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 50% !important;
-  }
-  .logo {
-    margin: 24px 0;
-  }
-  .logo a.brand {
-    font-size: 24px;
-  }
-  .logo a.brand img {
-    max-height: 50px;
-  }
-  .logo p {
-    font-size: 13px;
-  }
+  h1, .h1 { font-size: 37px; }
+  h2, .h2 { font-size: 27px; } 
+  h3, .h3 { font-size: 23px; } 
+  h4, .h4 { font-size: 18px; } 
+  h5, .h5 { font-size: 15px; } 
+  h6, .h6 { font-size: 13px; }
+  .stretchy_wrapper.ratio_slider { padding-bottom: 50% !important; }
+  .logo                          { margin: 24px 0; } 
+  .logo a.brand                  { font-size: 24px; } 
+  .logo a.brand img              { max-height: 50px; } 
+  .logo p                        { font-size: 13px; }
   label.mobile_collapser {
     position: absolute;
     top: 50%;
@@ -8135,167 +8051,11 @@ ul.owl-carousel {
     width: 20px;
   }
 }
-/* =Responsive: Extra small devices (XS) Phones
--------------------------------------------------------------- */
-@media only screen and (max-width: 767px) {
-  h1,
-  .h1 {
-    font-size: 33px;
-  }
-  h2,
-  .h2 {
-    font-size: 24px;
-  }
-  h3,
-  .h3 {
-    font-size: 20px;
-  }
-  h4,
-  .h4 {
-    font-size: 16px;
-  }
-  h5,
-  .h5 {
-    font-size: 13px;
-  }
-  h6,
-  .h6 {
-    font-size: 12px;
-  }
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 70% !important;
-  }
-  .logo {
-    margin: 24px 0;
-  }
-  .logo a.brand {
-    font-size: 22px;
-  }
-  .logo a.brand img {
-    max-height: 50px;
-  }
-  .logo p {
-    font-size: 12px;
-  }
-  /*** HEAD PANEL ***/
-  .caption .inner .t1 {
-    font-size: 50px;
-  }
-  .caption .inner .t2 {
-    font-size: 28px;
-  }
-  .caption .inner .t3 {
-    font-size: 20px;
-  }
-  .caption .inner p.desc {
-    font-size: 15px;
-  }
-  .caption.caption_fancy .inner .t1 {
-    font-size: 50px;
-  }
-  .caption.caption_fancy .inner .t2 {
-    font-size: 28px;
-  }
-  .caption.caption_fancy .inner .t3 {
-    font-size: 20px;
-  }
-  .caption.caption_fancy .inner p.desc {
-    font-size: 15px;
-  }
-  .caption.caption_flat .inner .t1 {
-    font-size: 36px;
-  }
-  .caption.caption_flat .inner .t2 {
-    margin-bottom: 20px;
-  }
-  .caption.caption_flat .inner p.desc {
-    font-size: 18px;
-  }
-  .map {
-    height: 280px !important;
-  }
-  .newsletter_form .newsletter_input {
-    width: 69%;
-    display: inline-block;
-  }
-  .newsletter_form button.form-control {
-    display: inline-block;
-    width: auto;
-  }
-  .pricing_plan {
-    margin-bottom: 10px;
-  }
-  .owl-nav {
-    visibility: hidden;
-  }
-  .copyright div {
-    text-align: center;
-  }
-}
-/* =Responsive: Small Phones (XXS)
--------------------------------------------------------------- */
-@media only screen and (max-width: 480px) {
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 80% !important;
-  }
-  .hidden-xxs {
-    display: none;
-  }
-  .menu_container > ul.collapsed > li {
-    width: 100% !important;
-    border-right: solid 0px #cccccc !important;
-  }
-  .menu_container > ul.collapsed > li:last-child {
-    border-bottom: solid 0px red !important;
-  }
-  .newsletter_form .newsletter_input {
-    width: 100%;
-    display: block;
-  }
-  .newsletter_form button.form-control {
-    display: block;
-    margin-bottom: 20px;
-  }
-  .section_header.fancy h2 {
-    font-size: 45px;
-  }
-  .section_header.fancy h3 {
-    font-size: 37.5px;
-  }
-  .section_header.fancy h4 {
-    font-size: 28.5px;
-  }
-  .section_header.fancy h5 {
-    font-size: 24px;
-  }
-  .section_header.fancy h6 {
-    font-size: 21px;
-  }
-}
-/* =Responsive: Small Phones (XXXS)
--------------------------------------------------------------- */
-@media only screen and (max-width: 320px) {
-  .stretchy_wrapper.ratio_slider {
-    padding-bottom: 100% !important;
-  }
-  .hidden-xxxs {
-    display: none;
-  }
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
-  .menu_container.collapsed {
-    -o-transform: translate(0px, 0px);
-    -webkit-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-  }
-}
 
 /*------------------------------------------------------------- Common To All Pages  ----------------------------------------------------------------*/
 .brand-color { color: #6fb586; } /* Website brand color */
 .active-tab  { color: #6fb586; background: none; border-bottom: solid 1px #6fb586;} /* Change color of active tab */
-.cursor-pointer {cursor: default ;}
+/* .cursor-pointer {cursor: default ;} */
 
 /*------------------------------------------------------------- Common : Body Element ----------------------------------------------------------------*/
 body {
@@ -8404,12 +8164,9 @@ hr { margin-bottom: 0 !important; }
 #contact-phone           { width: 49%; margin-left: 1%; }
 #contact-message         { resize: none;}
 
-/*----------------------------------------------------------- Contact Page : Contact Details ----------------------------------------------------------------*/
+/*----------------------------------------------------- Contact Page : Contact Details -----------------------------------------------------------------------*/
 .contact-box             { position: relative; width: 100%; display: block; margin: 1.5rem 0 1.5rem 0; padding: 1rem 1rem 0 1rem; }
 .contact-box img         { width: 36px; height: auto; display: block; margin: 0 auto; }
-/* .contact-box h1, .contact-box h2, .contact-box h3, .contact-box h4, .contact-box h5, .contact-box h6{ 
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
-} */
 .contact-box h4          { font-weight: 600; font-size: 2.4rem; }
 .contact-box a           { margin-bottom: 1.5rem; }
 .contact-box p           { word-wrap: break-word; padding: 0 4% 0 4%; min-height: 70px; }
@@ -8419,8 +8176,80 @@ hr { margin-bottom: 0 !important; }
 .btn-dark-bg             { background-color: #000; color: #2ecc71 !important; border: 1px #2ecc71 solid; text-transform: uppercase; font-weight: 400; line-height: 1.5; margin-left: 0px; margin-top: 0px; margin-bottom: 12px;}
 @media (max-width: 768px){ .contact-both-pad{ margin-left: 16.667%; } }
 
-/*-----------------------------------------------------   Common To All Activities Page ----------------------------------------------------------------*/
+/*----------------------------------------------------- Common To All Activities Page -------------------------------------------------------------------------*/
 .activities-icon{ height: 1.2em; text-align: center; margin: 0 2px 2px 2px!important; } /* To give oval shape circualar look */
 .facility_bg_light .text_block h2 a:hover{ color: #000; }
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img{ filter: grayscale(0); } /* Animation on actvities images */
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img:hover{ filter: grayscale(1); } /* Animation on actvities images */
+
+/*----------------------------------------------------- Responsive: Very Large Desktops (Higher Part of LG) ------------------------------------------------------------*/
+@media only screen and (min-width: 1401px) {
+  .vcenter div[class*="col-"]               { display: inline-block; vertical-align: middle; float: none; margin-right: -4px; }
+  .vbottom div[class*="col-"]               { display: inline-block; vertical-align: bottom; float: none; margin-right: -4px; }
+}
+/*----------------------------------------------------- Responsive: Large Desktops (Lower 200px Part of LG) ------------------------------------------------------------*/
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .stretchy_wrapper.ratio_slider            { padding-bottom: 40% !important; } 
+  .vcenter div[class*="col-"]               { display: inline-block; vertical-align: middle; float: none; margin-right: -4px; } 
+  .vbottom div[class*="col-"]               { display: inline-block; vertical-align: bottom; float: none; margin-right: -4px; }
+}
+/*----------------------------------------------------- Responsive: Medium devices (MD) Desktops ------------------------------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menu_container ul.main_menu > li > a     { padding: 10px 10px; }
+  .stretchy_wrapper.ratio_slider            { padding-bottom: 50% !important; }
+  .vcenter div[class*="col-"]               { display: inline-block; vertical-align: middle; float: none; margin-right: -4px; }
+  .vbottom div[class*="col-"]               { display: inline-block; vertical-align: bottom; float: none; margin-right: -4px; }
+}
+/*----------------------------------------------------- Responsive: Extra small devices (XS) Phones ------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  h1, .h1 { font-size: 33px; }
+  h2, .h2 { font-size: 24px; }
+  h3, .h3 { font-size: 20px; }
+  h4, .h4 { font-size: 16px; }
+  h5, .h5 { font-size: 13px; }
+  h6, .h6 { font-size: 12px; }
+  .stretchy_wrapper.ratio_slider       { padding-bottom: 70% !important; }
+  .logo                                { margin: 24px 0; }
+  .logo a.brand                        { font-size: 22px; }
+  .logo a.brand img                    { max-height: 50px; }
+  .logo p                              { font-size: 12px; }     
+  .caption .inner .t1                  { font-size: 50px; }
+  .caption .inner .t2                  { font-size: 28px; }
+  .caption .inner .t3                  { font-size: 20px; }
+  .caption .inner p.desc               { font-size: 15px; }
+  .caption.caption_fancy .inner .t1    { font-size: 50px; }
+  .caption.caption_fancy .inner .t2    { font-size: 28px; }
+  .caption.caption_fancy .inner .t3    { font-size: 20px; }
+  .caption.caption_fancy .inner p.desc { font-size: 15px; } 
+  .caption.caption_flat .inner .t1     { font-size: 36px; } 
+  .caption.caption_flat .inner .t2     { margin-bottom: 20px; } 
+  .caption.caption_flat .inner p.desc  { font-size: 18px; }
+  .map                                 { height: 280px !important; }
+  .newsletter_form .newsletter_input   { width: 69%; display: inline-block; }
+  .newsletter_form button.form-control { display: inline-block; width: auto; }
+  .pricing_plan                        { margin-bottom: 10px; } 
+  .owl-nav                             { visibility: hidden; } 
+  .copyright div                       { text-align: center; } 
+}
+/*----------------------------------------------------- Responsive: Small Phones (XXS) ---------------------------------------------------------------------------*/
+@media only screen and (max-width: 480px) {
+  .stretchy_wrapper.ratio_slider       { padding-bottom: 80% !important; }
+  .hidden-xxs                          { display: none; }
+  .menu_container > ul.collapsed > li  { width: 100% !important; border-right: solid 0px #cccccc !important; }
+  .menu_container > ul.collapsed > li:last-child { border-bottom: solid 0px red !important; }
+  .newsletter_form .newsletter_input   { width: 100%; display: block; }
+  .newsletter_form button.form-control { display: block; margin-bottom: 20px; }
+  .section_header.fancy h2             { font-size: 45px; } 
+  .section_header.fancy h3             { font-size: 37.5px; } 
+  .section_header.fancy h4             { font-size: 28.5px; } 
+  .section_header.fancy h5             { font-size: 24px; } 
+  .section_header.fancy h6             { font-size: 21px; }
+}
+/*----------------------------------------------------- Responsive: Small Phones (XXXS) ---------------------------------------------------------------------------*/
+@media only screen and (max-width: 320px) {
+  .stretchy_wrapper.ratio_slider { padding-bottom: 100% !important; }
+  .hidden-xxxs                   { display: none; }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .menu_container.collapsed      { -o-transform: translate(0px, 0px); -webkit-transform: translate(0px, 0px); -ms-transform: translate(0px, 0px); transform: translate(0px, 0px); }
+}
