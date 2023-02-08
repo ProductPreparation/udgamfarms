@@ -10,7 +10,7 @@ window.onscroll = function() {
 
 /* Function to send message to the user */
 function sendWhatsapp(message){
-    let num="+917838169412";
+    let num="+919234551799";
     let arrDate    = document.getElementById("date_check_in").value;
     let depDate    = document.getElementById("date_check_out").value;
     let noOfAdults = document.getElementById("no_of_adults").value;
