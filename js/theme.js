@@ -512,6 +512,7 @@ jQuery(function($){
           autoplayTimeout: 2000,
           dots: true,
           nav: true,
+          autoplayHoverPause:true,
           /* navText: [ "<i class='previous_icon'></i>", "<i class='next_icon'></i>"], */ 
           navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
         });
