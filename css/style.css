@@ -657,8 +657,8 @@ fieldset[disabled] .btn-default {
   font-size: 12px;
   line-height: 1.5;
   border-radius: 0;
-  border: 1px #6fb586 solid;
-  color: #6fb586 !important;
+  border: 1px #2ecc71 solid;
+  color: #2ecc71 !important;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -706,7 +706,7 @@ fieldset[disabled] .btn-primary {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #6fb586;
+  background: #2ecc71; /* Change init : Changed button hover color */
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 100%;
@@ -730,8 +730,8 @@ fieldset[disabled] .btn-primary {
   transform: scaleY(1);
 }
 .btn-primary.filled {
-  border: 1px solid #6fb586;
-  background-color: #6fb586;
+  border: 1px solid #2ecc71;
+  background-color: #2ecc71;
   color: #fff !important;
 }
 .btn-secondary {
@@ -1639,9 +1639,7 @@ NAVIGATION AND TOOLS ON THE HEADER
   color: #ffffff;
   background: none;
 }
-.header nav.primary_nav ul li a:hover,
-.header nav.primary_nav ul li a:active {
-  color: #6fb586; /* Change #init : Changed active tab color on green */
+.header nav.primary_nav ul li a:hover{
   background: none;
 }
 .header nav.primary_nav ul li.logo_in_nav a {
@@ -4687,16 +4685,8 @@ Booking form
 -------------------------------------------------------------- 
 */
 /* Inputs */
-form.booking_form {
-  padding: 24px;
-  min-height: 0px; /* Change #init : min-height: 280px; */
-
-}
-@media (max-width: 991px) {
-  form.booking_form {
-    padding-bottom: 24px; /* Change #init : padding-bottom: 72px */
-  }
-}
+form.booking_form { padding: 24px; min-height: 0px; /* Change #init : min-height: 280px; */ }
+@media (max-width: 991px) { form.booking_form { padding-bottom: 24px; /* Change #init : padding-bottom: 72px */ } }
 form.booking_form label {
   display: block;
   font-weight: 200;
@@ -7428,7 +7418,7 @@ footer .copyright_content {
   font-size: 14px; /* Change #init : font-size: 12px */
   opacity: .5;
   padding-top: 20px;
-  color: #6fb586;/* Change #init : color: #fdfdfd; */
+  color: #2ecc71;/* Change #init : color: #fdfdfd; */
 }
 .copyright p {
   vertical-align: bottom;
@@ -8303,10 +8293,8 @@ ul.owl-carousel {
 }
 
 /*------------------------------------------------------------- Common To All Pages  ----------------------------------------------------------------*/
-/* Website brand color */
-.brand-color{
-  color: #6fb586; 
-}
+.brand-color { color: #6fb586; } /* Website brand color */
+.active-tab  { color: #6fb586; background: none; border-bottom: solid 1px #6fb586;} /* Change color of active tab */
 
 /*------------------------------------------------------------- Common : Body Element ----------------------------------------------------------------*/
 body {
@@ -8371,7 +8359,7 @@ hr { margin-bottom: 0 !important; }
 .header a:hover, .header a:active              { color: #6fb586; }
 .header.full_width .mainbar .container,
 .header.full_width .top_bar .container         { width: 100%; }
-.header.transparent                            { position: absolute; top: 0; left: 0; width: 100%; background-color: #171720 !important; background-color: rgba(23, 23, 32, 0.4) !important; }
+.header.transparent                            { position: absolute; top: 0; left: 0; width: 100%; background-color: #171720 !important; background-color: rgba(23, 23, 32, 0.8) !important; }
 .header.sticky_header                          { left: 0; position: fixed; top: 0; width: 100%; }
 .header.sticky_header.transparent              { position: fixed; }
 .header.appearing_sticky_header {
@@ -8421,16 +8409,16 @@ hr { margin-bottom: 0 !important; }
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; 
 } */
 .contact-box h4          { font-weight: 600; font-size: 2.4rem; }
-.contact-box a           { color: #fff !important; margin-bottom: 1.5rem; }
+.contact-box a           { margin-bottom: 1.5rem; }
 .contact-box p           { word-wrap: break-word; padding: 0 4% 0 4%; min-height: 70px; }
-.contact-box p span      { color: #ffb215; }
+.contact-box p span      { color: #2ecc71; }
 .contact-box p span:hover{ font-weight: 500; }
-.contact-box i:hover     { color: #ffb215; }
-.btn-dark-bg             { background-color: #444; color: #fff; }
+.contact-box i:hover     { color: #2ecc71; }
+.btn-dark-bg             { background-color: #000; color: #2ecc71 !important; border: 1px #2ecc71 solid; text-transform: uppercase; font-weight: 400; line-height: 1.5; margin-left: 0px; margin-top: 0px; margin-bottom: 12px;}
 @media (max-width: 768px){ .contact-both-pad{ margin-left: 16.667%; } }
 
 /*-----------------------------------------------------   Common To All Activities Page ----------------------------------------------------------------*/
 .activities-icon{ height: 1.2em; text-align: center; margin: 0 2px 2px 2px!important; } /* To give oval shape circualar look */
-.facility_bg_light .text_block h2 a:hover{ color: #ffb215; }
+.facility_bg_light .text_block h2 a:hover{ color: #000; }
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img{ filter: grayscale(0); } /* Animation on actvities images */
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img:hover{ filter: grayscale(1); } /* Animation on actvities images */
