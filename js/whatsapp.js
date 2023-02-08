@@ -1,3 +1,4 @@
+/* Function to show static whatsapp window on scroll */
 window.onscroll = function() {
     var btn = document.getElementById("whatsapp-chat-btn");
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
@@ -7,7 +8,7 @@ window.onscroll = function() {
     }
 };
 
-
+/* Function to send message to the user */
 function sendWhatsapp(message){
     let num="+917838169412";
     let arrDate    = document.getElementById("date_check_in").value;

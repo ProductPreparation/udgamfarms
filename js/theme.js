@@ -808,23 +808,6 @@ jQuery(window).load(function(a,b,c){
 
   //END================ LIGHTBOX ===================================================
 
-
-/* $(function () {
-	$('#date_check_in').datetimepicker({
-			icons: {
-				next: "form_next_icon",
-				previous: "form_previous_icon",
-			},
-			format: 'D MMMM'
-	});	
-	$('#date_check_out').datetimepicker({
-			icons: {
-				next: "form_next_icon",
-				previous: "form_previous_icon",
-			},
-			format: 'D MMMM'
-		});
-	}); */
 });
 
 //END============================= JQUERY TO PERFORM ON WINDOW LOAD =======================================
