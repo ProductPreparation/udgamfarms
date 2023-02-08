@@ -8295,6 +8295,7 @@ ul.owl-carousel {
 /*------------------------------------------------------------- Common To All Pages  ----------------------------------------------------------------*/
 .brand-color { color: #6fb586; } /* Website brand color */
 .active-tab  { color: #6fb586; background: none; border-bottom: solid 1px #6fb586;} /* Change color of active tab */
+.cursor-pointer {cursor: default ;}
 
 /*------------------------------------------------------------- Common : Body Element ----------------------------------------------------------------*/
 body {
