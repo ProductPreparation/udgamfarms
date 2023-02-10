@@ -9,7 +9,7 @@ window.onscroll = function() {
 };
 
 /* Function to send message to the user */
-function sendWhatsapp(message){
+function sendQueryWhatsapp(message){
     let num="+919234551799";
     let arrDate    = document.getElementById("date_check_in").value;
     let depDate    = document.getElementById("date_check_out").value;
@@ -21,15 +21,12 @@ function sendWhatsapp(message){
     win.focus();
   }
 
-function sendWhatsappAndSave(message){
-    let num="+919234551799";
+function saveQueryDB(message){
     let arrDate    = document.getElementById("date_check_in").value;
     let depDate    = document.getElementById("date_check_out").value;
     let noOfAdults = document.getElementById("no_of_adults").value;
     let noOfRooms  = document.getElementById("no_of_rooms").value;
-
     let msg = "Hi, I want to check availability starting : " + arrDate + " and ending : " + depDate + " for " + noOfAdults + " adults and " + noOfRooms + " rooms.";
-    var win = window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
 
     let apiUrl = 'http://localhost:5000/online-queries';
     let data = {arrival_date: arrDate, departure_date: depDate, no_of_adults: noOfAdults, no_of_rooms: noOfRooms};
