@@ -3,7 +3,6 @@ const morgan = require('morgan')
 var cors = require('cors')
 
 const db = require('./db')
-
 const PORT = process.env.PORT || 5000
 const app = express()
 
@@ -13,12 +12,10 @@ app.use(express.urlencoded({ extended: true }))
 
 const corsOpts = {
   origin: '*',
-
   methods: [
     'GET',
     'POST',
   ],
-
   allowedHeaders: [
     'Content-Type',
   ],
