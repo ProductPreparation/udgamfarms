@@ -5716,15 +5716,13 @@ Text block
 }
 .text_block div.footer_block {
   display: inline-block;
+  margin: 0 15px 0 15px;
 }
 @media (max-width: 768px) {
   .text_block div.footer_block {
     display: block;
     text-align: left;
   }
-}
-.text_block div.footer_block i {
-  display: inline-block;
 }
 .text_block a.btn-black {
   margin-top: 10px;
