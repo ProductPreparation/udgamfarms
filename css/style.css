@@ -2343,7 +2343,7 @@ THE SECONDARY NAV WIDGETIZED AREA
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 50vh;
   width: 100%;
 }
 /*** Head Panel's Heading group ***/
@@ -8102,19 +8102,7 @@ h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small,
 hr { margin-bottom: 0 !important; }
 
 /*------------------------------------------------------------- Common : Header Element ----------------------------------------------------------------*/
-.header {
-  /* font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
-  background-color: #171720 !important;
-  width: 100%;
-  height: auto;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-  position: relative; */
-  z-index: 9999;
-}
+.header                                        { z-index: 9999; }
 .header .container, .header .container-fluid   { position: relative; min-height: 64px; }
 .header a:link, .header a:visited              { color: #ffffff; }
 .header a:hover, .header a:active              { color: #6fb586; }
@@ -8123,31 +8111,11 @@ hr { margin-bottom: 0 !important; }
 .header.transparent                            { position: absolute; top: 0; left: 0; width: 100%; background-color: #171720 !important; background-color: rgba(23, 23, 32, 0.8) !important; }
 .header.sticky_header                          { left: 0; position: fixed; top: 0; width: 100%; }
 .header.sticky_header.transparent              { position: fixed; }
-.header.appearing_sticky_header {
-  position: fixed;
-  -o-transform: translate(0, -98px);
-  -webkit-transform: translate(0, -98px);
-  -ms-transform: translate(0, -98px);
-  transform: translate(0, -98px);
-}
-.header.appearing_sticky_header.stuck {
-  -o-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
+.header.appearing_sticky_header                { position: fixed; -o-transform: translate(0, -98px); -webkit-transform: translate(0, -98px); -ms-transform: translate(0, -98px); transform: translate(0, -98px); }
+.header.appearing_sticky_header.stuck          { -o-transform: translate(0, 0); -webkit-transform: translate(0, 0); -ms-transform: translate(0, 0); transform: translate(0, 0); }
 .header.bottom_sticky_header                   { position: fixed; top: inherit; bottom: 0px; }
 .header.bottom_to_top_sticky_header            { position: absolute !important; bottom: 0px; top: inherit; }
-.header.bottom_to_top_sticky_header.stuck {
-  position: fixed !important;
-  top: 0px;
-  bottom: inherit;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-overflow-scrolling: touch;
-}
-
+.header.bottom_to_top_sticky_header.stuck      { position: fixed !important; top: 0px; bottom: inherit; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; -webkit-overflow-scrolling: touch; }
 /* Whatsapp sticky icon related */
 #whatsapp-chat-btn       { position: fixed; bottom: 60px; right: 20px; z-index: 9999; width: 240px; height: 60px; font-size: 20px; display: none; }
 #whatsapp-chat-btn a     { display: block; background-color: #25d366; color: #fff; padding: 10px; text-align: center; text-decoration: none; border-radius: 15px; }
@@ -8176,12 +8144,15 @@ hr { margin-bottom: 0 !important; }
 .btn-dark-bg             { background-color: #000; color: #2ecc71 !important; border: 1px #2ecc71 solid; text-transform: uppercase; font-weight: 400; line-height: 1.5; margin-left: 0px; margin-top: 0px; margin-bottom: 12px;}
 @media (max-width: 768px){ .contact-both-pad{ margin-left: 16.667%; } }
 
+/*--------------------------------------------------------------------- TNC Page  -----------------------------------------------------------------------------*/
+.tnc_padding             { padding: 40px 80px 40px 80px;}
+
 /*----------------------------------------------------- Common To All Activities Page -------------------------------------------------------------------------*/
 .activities-icon{ height: 1.2em; text-align: center; margin: 0 2px 2px 2px!important; } /* To give oval shape circualar look */
 .facility_bg_light .text_block h2 a:hover{ color: #000; }
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img{ filter: grayscale(0); } /* Animation on actvities images */
 .light_section .container .justify-content-center .col-md-12 .row .small_screen_margin_top_half div img:hover{ filter: grayscale(1); } /* Animation on actvities images */
-.contact-us-for-info   {margin-left: 12px;}
+.contact-us-for-info   {margin-left: 0px;}
 .tnc {position: absolute; right: 0;margin-right: 24px;}
 
 /*----------------------------------------------------- Responsive: Very Large Desktops (Higher Part of LG) ------------------------------------------------------------*/
