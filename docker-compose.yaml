@@ -47,7 +47,7 @@ services:
       # When the PostgresSQL container is started it will run any scripts
       # provided in the `docker-entrypoint-initdb.d` directory, this connects
       # our seed file to that directory so that it gets run
-      - ./dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
+      - ./db/dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
       - db-data:/var/lib/postgresql/data
   nginx:
 #    image: nginx:1.19.7-alpine
