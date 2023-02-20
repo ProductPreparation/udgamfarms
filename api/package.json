@@ -1,13 +1,10 @@
 {
-  "name": "docker-tut",
+  "name": "ug-api",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^4.17.1",
-    "knex": "^2.4.2",
-    "morgan": "^1.10.0",
     "pg": "^8.5.1"
   },
   "scripts": {
@@ -15,5 +12,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "IMIT"
 }
