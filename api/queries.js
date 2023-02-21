@@ -3,7 +3,7 @@ const pool = new Pool({
   user: 'postgres',
   host: 'postgres',
   database: 'ugf',
-  password: 'admin',
+  password: process.env.DB_PASSWORD || 'admin',
   port: 5432,
 });
 
@@ -29,7 +29,8 @@ const getAllQueries = (request, response) =>
       [arrival_date, departure_date, no_of_adults, no_of_rooms],
       (error, results) => {
         if (error) {
-          throw error;
+          console.log(error);
+          return response.status(400).send(`Bad Request: ${results.rows[0].arrival_date}`);
         }
         response.status(201).send(`User added with date: ${results.rows[0].arrival_date}`);
       }

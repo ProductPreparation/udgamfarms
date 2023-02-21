@@ -29,7 +29,7 @@ function saveQueryDB(message){
     let noOfRooms  = document.getElementById("no_of_rooms").value;
     let msg = "Hi, I want to check availability starting : " + arrDate + " and ending : " + depDate + " for " + noOfAdults + " adults and " + noOfRooms + " rooms.";
 
-    let apiUrl = 'http://localhost/api/online-queries';
+    let apiUrl = 'http://34.23.86.33/api/online-queries';
     let data = {arrival_date: arrDate, departure_date: depDate, no_of_adults: noOfAdults, no_of_rooms: noOfRooms};
 
     fetch(`${apiUrl}`, {

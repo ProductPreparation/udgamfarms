@@ -11,4 +11,4 @@ app.get('/api/online-queries', db.getAllQueries)
 
 app.post('/api/online-queries', db.createOnlineQuery)
 
-app.listen(PORT, () => console.log(`Server up at http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server up at http://34.23.86.33:${PORT}`))
