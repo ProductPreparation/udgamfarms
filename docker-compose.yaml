@@ -13,6 +13,8 @@ services:
       - postgres
     ports:
       - "3000:3000"
+    env:
+      - DB_PASSWORD=${DB_PASSWORD}"
     volumes:
       # Maps our current project directory `.` to
       # our working directory in the container
@@ -36,7 +38,7 @@ services:
       # Our Node app will use these to connect
       # to the database
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=admin
+      - POSTGRES_PASSWORD=${DB_PASSWORD}"
       - POSTGRES_DB=ugf
     ports:
       # Standard port for PostgreSQL databases
@@ -48,7 +50,7 @@ services:
       # provided in the `docker-entrypoint-initdb.d` directory, this connects
       # our seed file to that directory so that it gets run
       - ./db/dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
-      - db-data:/var/lib/postgresql/data
+      #- db-data:/var/lib/postgresql/data
   nginx:
 #    image: nginx:1.19.7-alpine
     image: fabiocicerchia/nginx-lua:alpine-compat
