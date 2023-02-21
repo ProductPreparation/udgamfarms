@@ -13,7 +13,7 @@ services:
       - postgres
     ports:
       - "3000:3000"
-    env:
+    environment:
       - DB_PASSWORD=${DB_PASSWORD}"
     volumes:
       # Maps our current project directory `.` to

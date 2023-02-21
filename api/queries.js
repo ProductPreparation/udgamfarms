@@ -11,6 +11,8 @@ const getAllQueries = (request, response) =>
 {
   pool.query('SELECT * FROM online_queries ORDER BY arrival_date ASC', (error, results) => {
     if (error) {
+      console.log(error);
+      // console.log(process.env.DB_PASSWORD);
       return response.status(500).send('Error');
     }
     response.status(200).json(results.rows);
