@@ -33,7 +33,7 @@ const getAllQueries = (request, response) =>
       (error, results) => {
         if (error) {
           console.log(error);
-          return response.status(400).send(`Bad Request: ${results.rows[0].arrival_date}`);
+          return response.status(400).send('Bad Request');
         }
         response.status(201).send(`User added with date: ${results.rows[0].arrival_date}`);
       }
