@@ -20,6 +20,7 @@ const getAllQueries = (request, response) =>
 }
   const createOnlineQuery = (request, response) => 
   {
+    console.log(request.body);
     const { arrival_date, departure_date,  no_of_adults, no_of_rooms} = request.body;
     if(arrival_date.length==0){
       console.log('invalid input');
