@@ -20,7 +20,7 @@ app.get('/', csrfProtection, function (req, res) {
     res.render('index', { csrfToken: req.csrfToken() });
 });
 
-app.post('/api/online-queries/fetch', db.getAllQueries)
+app.get('/api/online-queries', db.getAllQueries)
 
 app.post('/api/online-queries',csrfProtection, db.createOnlineQuery)
 
