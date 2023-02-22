@@ -12,7 +12,7 @@ const getAllQueries = (request, response) =>
   const auth = {user: 'udgam', password: process.env.API_PASSWRD} ;
 
   // parse login and password from headers
-  const b64auth = (req.headers.authorization || '').split(' ')[1] || '';
+  const b64auth = (request.headers.authorization || '').split(' ')[1] || '';
   const [user, password] = Buffer.from(b64auth, 'base64').toString().split(':');
 
   // Verify login and password are set and correct
