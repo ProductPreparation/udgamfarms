@@ -20,9 +20,9 @@ const getAllQueries = (request, response) =>
         // console.log(process.env.DB_PASSWORD);
         return response.status(500).send('Error');
       }
-      response.status(200).json(results.rows);
+      
     });
-    
+    response.status(200).json(results.rows);
   }
   return response.status(401).send('Unauthorized');
 }
