@@ -25,17 +25,8 @@ app.post('/api/online-queries/fetch', db.getAllQueries)
 app.post('/api/online-queries',csrfProtection, db.createOnlineQuery)
 
 app.get("*", (req, res) => {
-    const path = req.path
-    const extension = path.split('.').pop();
-    console.log(path);
-    console.log(extension);
-    if(extension===path){
-        console.log('hit');
-        res.render(path.split('/').pop());
-    }
-    else{
-        res.sendFile(__dirname+"/views" + req.path);
-    }    
+    const path = req.path.split('/').pop();
+        res.render(path);   
 });
 
 app.listen(PORT, () => console.log(`Server up at http://localhost:${PORT}`))

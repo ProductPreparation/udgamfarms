@@ -15,7 +15,7 @@ services:
       - "3000:3000"
     environment:
       - DB_PASSWORD=${DB_PASSWORD}"
-    volumes:
+    # volumes:
       # Maps our current project directory `.` to
       # our working directory in the container
       #- ./:/usr/src/app/
@@ -49,8 +49,8 @@ services:
       # When the PostgresSQL container is started it will run any scripts
       # provided in the `docker-entrypoint-initdb.d` directory, this connects
       # our seed file to that directory so that it gets run
-      - ./db/dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
-      - db-data:/var/lib/postgresql/data
+     - ./db/dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
+     - db-data:/var/lib/postgresql/data
   nginx:
     image: nginx:1.19.7-alpine
     # image: fabiocicerchia/nginx-lua:alpine-compat
@@ -66,11 +66,11 @@ services:
       - ./nginx/upstream.conf:/etc/nginx/upstream.conf
       - ./nginx/error_log.log:/etc/nginx/error_log.log
       # - ./views:/usr/share/nginx/html
-      # - ./css:/usr/share/nginx/html/css
-      # - ./fonts:/usr/share/nginx/html/fonts
-      # - ./icons:/usr/share/nginx/html/icons
-      # - ./images:/usr/share/nginx/html/images
-      # - ./js:/usr/share/nginx/html/js
+      - ./api/views/css:/usr/share/nginx/html/css
+      - ./api/views/fonts:/usr/share/nginx/html/fonts
+      - ./api/views/icons:/usr/share/nginx/html/icons
+      - ./api/views/images:/usr/share/nginx/html/images
+      - ./api/views/js:/usr/share/nginx/html/js
 networks:
   app-net:
 volumes:
