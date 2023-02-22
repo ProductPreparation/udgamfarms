@@ -9,13 +9,17 @@ const pool = new Pool({
 
 const getAllQueries = (request, response) => 
 {
-  const { user, password} = request.body;
-  // console.log(user+ " "+password);
-  // console.log(process.env.API_PASSWRD);
-  if(!(user === 'udgam' && password === process.env.API_PASSWRD)){
-    
+  const auth = {user: 'udgam', password: process.env.API_PASSWRD} ;
+
+  // parse login and password from headers
+  const b64auth = (req.headers.authorization || '').split(' ')[1] || '';
+  const [user, password] = Buffer.from(b64auth, 'base64').toString().split(':');
+
+  // Verify login and password are set and correct
+  if (!(user && password && user === auth.user && password === auth.password)) {
     return response.status(401).send('Unauthorized');
   }
+
   pool.query('SELECT * FROM online_queries ORDER BY arrival_date ASC', (error, results) => {
     if (error) {
       console.log(error);
