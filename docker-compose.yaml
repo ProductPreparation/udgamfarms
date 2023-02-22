@@ -18,10 +18,10 @@ services:
     volumes:
       # Maps our current project directory `.` to
       # our working directory in the container
-      - ./:/usr/src/app/
+      #- ./:/usr/src/app/
       # node_modules workaround for volumes
       # https://stackoverflow.com/a/32785014
-      - /usr/src/app/node_modules
+      #- /usr/src/app/node_modules
     networks:
       - app-net
   # This is the configuration for our PostgreSQL database container
@@ -52,8 +52,8 @@ services:
       - ./db/dbschema.sql:/docker-entrypoint-initdb.d/dbschema.sql
       - db-data:/var/lib/postgresql/data
   nginx:
-#    image: nginx:1.19.7-alpine
-    image: fabiocicerchia/nginx-lua:alpine-compat
+    image: nginx:1.19.7-alpine
+    # image: fabiocicerchia/nginx-lua:alpine-compat
     container_name: nginx
     restart: always
     ports:
@@ -65,12 +65,12 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/upstream.conf:/etc/nginx/upstream.conf
       - ./nginx/error_log.log:/etc/nginx/error_log.log
-      - ./views:/usr/share/nginx/html
-      - ./css:/usr/share/nginx/html/css
-      - ./fonts:/usr/share/nginx/html/fonts
-      - ./icons:/usr/share/nginx/html/icons
-      - ./images:/usr/share/nginx/html/images
-      - ./js:/usr/share/nginx/html/js
+      # - ./views:/usr/share/nginx/html
+      # - ./css:/usr/share/nginx/html/css
+      # - ./fonts:/usr/share/nginx/html/fonts
+      # - ./icons:/usr/share/nginx/html/icons
+      # - ./images:/usr/share/nginx/html/images
+      # - ./js:/usr/share/nginx/html/js
 networks:
   app-net:
 volumes:

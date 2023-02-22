@@ -9,6 +9,10 @@ const pool = new Pool({
 
 const getAllQueries = (request, response) => 
 {
+  const { user, password} = request.body;
+  if(!(user==='udgam' && password===process.env.API_PASSWRD)){
+    return response.status(401).send('Error');
+  }
   pool.query('SELECT * FROM online_queries ORDER BY arrival_date ASC', (error, results) => {
     if (error) {
       console.log(error);
@@ -18,7 +22,8 @@ const getAllQueries = (request, response) =>
     response.status(200).json(results.rows);
   });
 }
-  const createOnlineQuery = (request, response) => 
+
+const createOnlineQuery = (request, response) => 
   {
     console.log(request.body);
     const { arrival_date, departure_date,  no_of_adults, no_of_rooms} = request.body;

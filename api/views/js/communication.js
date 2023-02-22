@@ -8,30 +8,33 @@ window.onscroll = function() {
     }
 };
 
+
+const form = document.getElementById('booking_form');
+form.addEventListener('submit', sendQueryWhatsapp);
+
+
 /* Function to send message to the user */
-function sendQueryWhatsapp(message){
-    saveQueryDB(message);
+function sendQueryWhatsapp(event){
+    event.preventDefault();
+    const data1 = new FormData(event.target);
+    const value = Object.fromEntries(data1.entries());
+
+    
     let num="+919234551799";
     let arrDate    = document.getElementById("date_check_in").value;
     let depDate    = document.getElementById("date_check_out").value;
     let noOfAdults = document.getElementById("no_of_adults").value;
     let noOfRooms  = document.getElementById("no_of_rooms").value;
+    saveQueryDB({_csrf: value._csrf, arrival_date: arrDate, departure_date: depDate, no_of_adults: noOfAdults, no_of_rooms: noOfRooms});
+
     let msg = "Hi, I want to check availability starting : " + arrDate + " and ending : " + depDate + " for " + noOfAdults + " adults and " + noOfRooms + " rooms.";
   
     var win = window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
     win.focus();
   }
 
-function saveQueryDB(message){
-    let arrDate    = document.getElementById("date_check_in").value;
-    let depDate    = document.getElementById("date_check_out").value;
-    let noOfAdults = document.getElementById("no_of_adults").value;
-    let noOfRooms  = document.getElementById("no_of_rooms").value;
-    let msg = "Hi, I want to check availability starting : " + arrDate + " and ending : " + depDate + " for " + noOfAdults + " adults and " + noOfRooms + " rooms.";
-
-    let apiUrl = 'http://34.23.86.33/api/online-queries';
-    let data = {arrival_date: arrDate, departure_date: depDate, no_of_adults: noOfAdults, no_of_rooms: noOfRooms};
-
+function saveQueryDB(data) {
+    let apiUrl = 'http://localhost/api/online-queries';
     fetch(`${apiUrl}`, {
         method: "POST",
         headers: {'Content-Type': 'application/json'}, 

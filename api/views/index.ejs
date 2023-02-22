@@ -73,7 +73,7 @@
                   <li><a href="/">Home</a></li>
                   <li><a href="/services">Services</a></li>
                   <li><a href="/activities">Activities</a></li>
-                  <li><a href="/sports.html">Sports</a></li>
+                  <li><a href="/sports">Sports</a></li>
                   <li><a href="/farm-to-table">Farm-To-Table</a></li>
                   <!-- <li><a href="/packages">Packages</a></li> -->
                   <!-- <li><a href="/blog">Blog</a></li> -->
@@ -139,12 +139,14 @@
           <section class="no_padding dark_section booking-form">
             <div class="row">
               <div class="col-md-12 text-center">
-                <form class="booking_form">
+                <form class="booking_form" id="booking_form">
 
                   <!-- Booking Enquiry Dates -->
                   <div class="col-md-12 text-center">
                     <div class="col-md-4 col-xs-12">
                       <div class="form-group">
+                        <input type="hidden" name="_csrf"
+                        value="<%= csrfToken %>">
                         <input type="text" placeholder="Arrival Date" id="date_check_in" autocomplete="off" onkeydown="return false;" required>
                       </div>
                     </div>
@@ -172,7 +174,7 @@
                   <!-- Booking Availability button -->
                   <div class="col-md-12 col-xs-12 text-center">
                     <!-- <button type="submit" onclick="sendWhatsapp();">SEND WHATSAPP QUERY</button> -->
-                    <button type="submit" onclick="sendQueryWhatsapp()">SEND WHATSAPP QUERY</button>
+                    <button type="submit">SEND WHATSAPP QUERY</button>
                   </div>
 
                 </form>
