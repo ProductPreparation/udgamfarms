@@ -34,7 +34,7 @@ function sendQueryWhatsapp(event){
   }
 
 function saveQueryDB(data) {
-    let apiUrl = 'http://localhost/api/online-queries';
+    let apiUrl = 'http://34.23.86.33/api/online-queries';
     fetch(`${apiUrl}`, {
         method: "POST",
         headers: {'Content-Type': 'application/json'}, 
