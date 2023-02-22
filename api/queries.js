@@ -10,17 +10,21 @@ const pool = new Pool({
 const getAllQueries = (request, response) => 
 {
   const { user, password} = request.body;
-  if(!(user==='udgam' && password===process.env.API_PASSWRD)){
-    return response.status(401).send('Error');
+  // console.log(user+ " "+password);
+  // console.log(process.env.API_PASSWRD);
+  if(user === 'udgam' && password === process.env.API_PASSWRD){
+    pool.query('SELECT * FROM online_queries ORDER BY arrival_date ASC', (error, results) => 
+    {
+      if (error) {
+        console.log(error);
+        // console.log(process.env.DB_PASSWORD);
+        return response.status(500).send('Error');
+      }
+      response.status(200).json(results.rows);
+    });
+    
   }
-  pool.query('SELECT * FROM online_queries ORDER BY arrival_date ASC', (error, results) => {
-    if (error) {
-      console.log(error);
-      // console.log(process.env.DB_PASSWORD);
-      return response.status(500).send('Error');
-    }
-    response.status(200).json(results.rows);
-  });
+  return response.status(401).send('Unauthorized');
 }
 
 const createOnlineQuery = (request, response) => 

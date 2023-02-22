@@ -14,7 +14,8 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - DB_PASSWORD=${DB_PASSWORD}"
+      - DB_PASSWORD=${DB_PASSWORD}
+      - API_PASSWRD=${API_PASSWRD}
     # volumes:
       # Maps our current project directory `.` to
       # our working directory in the container
@@ -38,7 +39,7 @@ services:
       # Our Node app will use these to connect
       # to the database
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=${DB_PASSWORD}"
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
       - POSTGRES_DB=ugf
     ports:
       # Standard port for PostgreSQL databases
